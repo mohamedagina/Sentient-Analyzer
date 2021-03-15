@@ -22,7 +22,6 @@ app.use(cors());
 app.use(express.static("dist"));
 
 console.log(__dirname);
-console.log(`Your API key is ${process.env.API_KEY}`);
 
 app.get("/", function (req, res) {
   res.sendFile("dist/index.html");
@@ -36,4 +35,21 @@ app.listen(8081, function () {
 
 app.get("/test", function (req, res) {
   res.send(mockAPIResponse);
+});
+
+// API Variables
+const key = process.env.API_KEY;
+const baseUrl = "https://api.meaningcloud.com/sentiment-2.1?";
+const lang = "en";
+
+//Handle POST requests
+
+app.post("/analyze", async (req, res) => {
+  const input = req.body.url;
+  const ApiUrl = `${baseUrl}key=${key}&url=${input}&lang=${lang}`;
+  fetch(ApiUrl)
+    .then((res) => res.json())
+    .then((data) => {
+      res.send(data);
+    });
 });
