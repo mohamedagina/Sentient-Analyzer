@@ -43,12 +43,12 @@ const baseUrl = "https://api.meaningcloud.com/sentiment-2.1?";
 const lang = "en";
 
 //Handle POST requests
-
-app.post("/analyze", async (req, res) => {
+const fetch = require("node-fetch");
+app.post("/analyze", (req, res) => {
   const input = req.body.url;
   const ApiUrl = `${baseUrl}key=${key}&url=${input}&lang=${lang}`;
   fetch(ApiUrl)
-    .then((res) => res.json())
+    .then((result) => result.json())
     .then((data) => {
       res.send(data);
     });

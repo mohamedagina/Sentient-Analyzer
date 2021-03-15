@@ -18,6 +18,9 @@ main {
         min-height: 4rem;
         padding: 1rem;
         border-radius: $border-size;
+        #result{
+            line-height: 2rem;
+        }
     }
 }
 
