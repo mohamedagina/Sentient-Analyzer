@@ -31,4 +31,4 @@ const postUrl = async (url = "", data = {}) => {
   return result;
 };
 
-export { handleSubmit };
+export { handleSubmit, postUrl };
