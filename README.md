@@ -20,21 +20,21 @@ You could spend years and get a masters degree focusing on the details of creati
 
 `cd` into your new folder and run:
 - `npm install`
-- [ ] Create a new ```.env``` file in the root of your project
-- [ ] Go to your .gitignore file and add ```.env``` - this will make sure that we don't push our environment variables to Github! If you forget this step, all of the work we did to protect our API keys was pointless.
+- Create a new ```.env``` file in the root of your project
+- Go to your .gitignore file and add ```.env``` - this will make sure that we don't push our environment variables to Github! If you forget this step, all of the work we did to protect our API keys was pointless.
 - make sure that you are signed up on [meaningcloud API](https://www.meaningcloud.com/)
-- [ ] Fill the .env file with your API keys like this:
+- Fill the .env file with your API keys like this:
 ```
 API_KEY=**************************
 ```
-- [ ] Add this code to the very top of your server/index.js file:
+- Add this code to the very top of your server/index.js file:
 ```
 const dotenv = require('dotenv');
 dotenv.config();
 ```
-- [ ] Reference variables you created in the .env file by putting ```process.env``` in front of it
-```
+- Reference variables you created in the .env file by putting ```process.env``` in front of it
+
 `npm run build-prod` | Build project
 `npm start` | Run project
-Open browser at http://localhost:8081/
+- Open browser at http://localhost:8081/
 
