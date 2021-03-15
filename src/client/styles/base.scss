@@ -1,0 +1,27 @@
+@import './variables.scss'; 
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: radial-gradient(circle,$background-primary,$background-secondary);
+}
+
+main {
+    flex: 2;
+    .result-container{
+        display:flex;
+        flex-direction: column;
+        gap: 1rem;
+        color: $font-color;
+        border: 1px solid $border-color;
+        min-height: 4rem;
+        padding: 1rem;
+        border-radius: $border-size;
+    }
+}
+
+section {
+    max-width: 800px;
+    margin: 50px auto;
+}

@@ -1,0 +1,14 @@
+@import './variables.scss';
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 40px;
+    .logo-container{
+        color: $font-color;
+        font-size: xx-large;
+        padding: 1rem;
+        border: 2px solid $border-color;
+        border-radius: $border-size;
+    }
+}
